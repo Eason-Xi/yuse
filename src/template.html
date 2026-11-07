@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>余色</title>
+<meta name="description" content="一张纸上的两种颜色：一段友情怎样破裂，又怎样补上。">
+<style>
+/*__FONTS__*/
+/* 版式：整部作品是一张满幅的纸，没有网页界面；字全部画进画布里，这里只留一个收尾按钮 */
+:root { --paper: #ece9e1; --ink: #14151a; --glow: #c8d4ee; color-scheme: light; }
+html, body { height: 100%; margin: 0; background: var(--paper); overflow: hidden; overscroll-behavior: none; }
+#c { position: fixed; inset: 0; width: 100vw; height: 100vh; height: 100dvh; display: block; touch-action: none; cursor: none; user-select: none; -webkit-user-select: none; }
+#cta { position: fixed; left: 50%; top: 66%; transform: translateX(-50%); font: 400 clamp(15px, 2.1vh, 20px)/1 "YS Fang", "Songti SC", serif; letter-spacing: .28em; padding: .9em 1.5em .9em 1.8em; color: var(--glow); background: transparent; border: 1px solid color-mix(in srgb, var(--glow) 42%, transparent); border-radius: 0; opacity: 0; transition: opacity 1.6s; cursor: pointer; z-index: 3; }
+#cta.on { opacity: 1; }
+#cta:hover { background: color-mix(in srgb, var(--glow) 12%, transparent); }
+#cta:focus-visible { outline: 2px solid var(--glow); outline-offset: 3px; }
+[hidden] { display: none !important; }
+#no { position: fixed; inset: 0; display: grid; place-items: center; padding: 24px; font: 400 18px/1.8 "Songti SC", serif; color: var(--ink); text-align: center; }
+</style>
+<canvas id="c" aria-label="余色：一张会流动的宣纸。按下、拖动来和水面互动。"></canvas>
+<button id="cta" type="button" hidden>复制这两个字</button>
+<div id="no" hidden>这部作品需要 WebGL2。请换一台电脑，或用新版 Chrome、Edge、Safari 打开。</div>
+<script>
+/*__JS__*/
+</script>

@@ -1,0 +1,11 @@
+# 成片不进仓库
+*.mp4
+*.wav
+
+# Artifact 用的版本，部署用 index.html
+yuse.html
+
+# 本机预览配置，含临时路径
+.claude/
+
+.DS_Store
